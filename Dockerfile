@@ -3,7 +3,7 @@
 #EXPOSE 8080
 #ADD ./target/springboot-eureka-server-0.0.1-SNAPSHOT.jar eureka-server.jar
 #ENTRYPOINT ["java","-jar","/eureka-server.jar"]
-FROM openjdk:18 AS build
+FROM maven:3.6.3-openjdk:18 AS build
 RUN mkdir -p /workspace
 WORKDIR /workspace
 COPY pom.xml /workspace
