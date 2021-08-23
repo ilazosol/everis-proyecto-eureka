@@ -35,3 +35,5 @@ jobs:
             registry-password: ${{ secrets.REGISTRY_PASSWORD }}
             name: eureka-server
             location: 'south central us'
+	    ports: 8761
+	    dns-name-label: eureka-server
